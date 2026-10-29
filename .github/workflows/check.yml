@@ -34,7 +34,7 @@ jobs:
         run: python vpngate.py
         env:
           # 已部署的检测 Worker (不要改动: 检测统一走这里)
-          https://checks5-2bb6.luochen1975.workers.dev?sstp=vpn:vpn@: ${{ secrets.DOMAIN }}
+          CHECK_WORKER: ${{ secrets.CHECK_WORKER_URL }}
           CHECK_CONCURRENCY: "32"
           CHECK_TIMEOUT: "90"
 
